@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+
+import { PERSONAJES } from '../../data/personajes.data';
+import { CharacterPage } from '../index.pages';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  characters: any[];
+  characterPage = CharacterPage;
 
-  constructor(public navCtrl: NavController) {
-
+  constructor() {
+    this.characters = PERSONAJES;
   }
-
 }
